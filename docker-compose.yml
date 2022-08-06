@@ -21,7 +21,7 @@ services:
      - ./logstash.conf:/usr/share/logstash/config/logstash.conf
    network_mode: "host"
    depends_on:
-     - elasticsearch
+     - elasticsearch  
 
  kibana:
    image: docker.elastic.co/kibana/kibana:7.17.3
