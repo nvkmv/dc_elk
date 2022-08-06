@@ -18,10 +18,10 @@ services:
      LS_JAVA_OPTS: "-Xmx1g -Xms1g"
    volumes:
      - ./logstash.yml:/usr/share/logstash/config/logstash.yml
-     - ./logstash.conf:/usr/share/logstash/config/logstash-sample.conf
+     - ./logstash.conf:/usr/share/logstash/config/logstash.conf
    network_mode: "host"
    depends_on:
-     - elasticsearch  
+     - elasticsearch
 
  kibana:
    image: docker.elastic.co/kibana/kibana:7.17.3
