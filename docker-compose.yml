@@ -14,14 +14,11 @@ services:
 
  logstash:
    image: docker.elastic.co/logstash/logstash:7.17.3
-   #ports:
-   #  - "5000:5000"
-   #  - "9600:9600"
    environment:
      LS_JAVA_OPTS: "-Xmx1g -Xms1g"
    volumes:
-     - ./logstash.yml/usr/share/logstash/config/logstash.yml
-     - ./logstash.conf/usr/share/logstash/config/logstash.conf
+     - ./logstash.yml:/usr/share/logstash/config/logstash.yml
+     - ./logstash.conf:/usr/share/logstash/config/logstash-sample.conf
    network_mode: "host"
    depends_on:
      - elasticsearch  
