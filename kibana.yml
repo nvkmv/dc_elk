@@ -6,3 +6,4 @@ elasticsearch.hosts: [ "http://localhost:9200" ]
 #xpack.monitoring.ui.elasticsearch.enabled: true
 #elasticsearch.username: elastic
 #elasticsearch.password: elastic
+
